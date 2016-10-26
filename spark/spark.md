@@ -102,7 +102,7 @@ In the Zeppelin notebook you've just imported, run the paragraph.
 
 It will read the objects under the *data* directory in your S3 bucket, parse the content and show the dataframe.
 
-![First paragrapg]("paragraph1.png")
+![First paragraph](paragraph1.png)
 
 ### Next steps
 
