@@ -38,7 +38,7 @@ docker run -d -p 80:80 djannot/ecsui
 
 The ECSUI application can now be accessed with a web browser on port 80.
 
-![Login]("login.png")
+![Login](login.png)
 
 You need to select the *Object User* authentication method and indicate your credentials.
 
@@ -50,15 +50,15 @@ If you are using your own ECS system, then you need to indicate the correspondin
 
 Go to *S3 API* -> *Requests*
 
-![S3 API]("s3.png")
+![S3 API](s3.png)
 
 You will simply click on the examples.
 
-![S3 API first example]("s3example1.png")
+![S3 API first example](s3example1.png)
 
 As soon as you click one example, the different steps are displayed.
 
-![S3 API first example first step]("s3example1step1.png")
+![S3 API first example first step](s3example1step1.png)
 
 When you click on one step, all the field are already filled with the right information.
 
@@ -66,17 +66,17 @@ You generally don't need to indicate anything. You'll simply need to click on Ex
 
 Whenever you need to indicate something, you'll have a field above the *Expected Response Code* field as shown below.
 
-![S3 API first example step with inputs]("s3example1stepwithinputs.png")
+![S3 API first example step with inputs](s3example1stepwithinputs.png)
 
 You can then click on *Execute*
 
-![S3 API first example first step status]("s3example1step1status.png")
+![S3 API first example first step status](s3example1step1status.png)
 
 The response code should be displayed in green.
 
 You can then click on it to display the response.
 
-![S3 API first example first step response]("s3example1step1response.png")
+![S3 API first example first step response](s3example1step1response.png)
 
 ### Appending data to an object
 
