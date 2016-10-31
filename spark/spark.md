@@ -23,7 +23,7 @@ If you don't have access to an ECS system, you can create an account on [ECS Tes
 
 Then, you need create an Amazon S3 bucket called *spark1* using a tool like [S3 Browser](http://www.s3browser.com).
 
-Finally, you need to upload this [file](tweets.json) in the bucket under a *data* directory.
+Finally, you need to upload the file called `tweets.json` in the bucket. This file is available in the Github repo.
 
 ### Apache Spark
 
@@ -90,9 +90,9 @@ Finally go to `/usr/zeppelin` and execute the `bin/zeppelin.sh` command to start
 
 The Zeppelin UI can now be accessed with a web browser on port 8080.
 
-![Apache Zeppelin](zeppelin.png)
+![Apache Zeppelin]("zeppelin.png")
 
-Click on *Import note* to import this [file](ecs.json)
+Click on *Import note* to import the file called `ecs.json`. This file is available in the Github repo.
 
 ## Lab
 
@@ -102,7 +102,7 @@ In the Zeppelin notebook you've just imported, run the paragraph.
 
 It will read the objects under the *data* directory in your S3 bucket, parse the content and show the dataframe.
 
-![First paragraph](paragraph1.png)
+![First paragrapg]("paragraph1.png")
 
 ### Next steps
 
