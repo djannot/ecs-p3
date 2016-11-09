@@ -179,7 +179,7 @@ Some other S3 compatible platforms don’t support this feature.
 
 Go to *Swift API* -> *Requests*
 
-![Swift API]("swift.png")
+![Swift API](swift.png)
 
 For the Swift API, you need to indicate the endpoint, user and password.
 
@@ -232,7 +232,7 @@ On Swift or other Swift compatible platforms, there is no similar feature availa
 
 Go to *Atmos API* -> *Requests*
 
-![Atmos API]("atmos.png")
+![Atmos API](atmos.png)
 
 For the Atmos API, you need to indicate the endpoint and subtenant.
 
