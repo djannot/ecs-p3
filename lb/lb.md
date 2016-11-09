@@ -61,7 +61,7 @@ docker run -e ZEUS_EULA=accept -e ZEUS_PASS=password --privileged -t --net=host 
 	- Verity that S3 Browser is configured for HTTP
 		- Browser Tools -> Options -> Connection -> Uncheck *Use Secure Transfer (HTTPS)*
 	
-#### SSL configuration
+### SSL configuration
 
 **Configuration tasks**
 
@@ -162,7 +162,7 @@ docker run --net=host --name nginxlb -v /root/nginx:/etc/nginx -d nginx
 	- Verity that S3 Browser is configured for HTTP
 		- Browser Tools -> Options -> Connection -> Uncheck *Use Secure Transfer (HTTPS)*
 
-#### SSL configuration
+### SSL configuration
 
 ![NGNIX - S3 SSL Load balancing](ngnix_2.jpg)
 
