@@ -90,7 +90,7 @@ Finally go to `/usr/zeppelin` and execute the `bin/zeppelin.sh` command to start
 
 The Zeppelin UI can now be accessed with a web browser on port 8080.
 
-![Apache Zeppelin]("zeppelin.png")
+![Apache Zeppelin](zeppelin.png)
 
 Click on *Import note* to import the file called `ecs.json`. This file is available in the Github repo.
 
@@ -102,7 +102,7 @@ In the Zeppelin notebook you've just imported, run the paragraph.
 
 It will read the objects under the *data* directory in your S3 bucket, parse the content and show the dataframe.
 
-![First paragrapg]("paragraph1.png")
+![First paragraph](paragraph1.png)
 
 ### Next steps
 

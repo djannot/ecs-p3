@@ -6,11 +6,11 @@ ECS supports several Object Storage APIs (Amazon S3, Openstack Swift, Atmos, CAS
 
 You'll use the ECSUI web application to discover the different features. 
 
-[ECSUI](https://github.com/djannot/ecsui) is a web application developped in Golang and leveraging AngularJS.
+[ECSUI](https://github.com/djannot/ecsui) is a web application developed in Golang and leveraging AngularJS.
 
 The goals of ECSUI are to:
 
-- demonstrate some nice S3 features (versioning, lifecycle policy, …) and several unique ECS capabilities using either S3 or Swift (byte range, retentions, metadata search, …)
+- demonstrate S3 features (versioning, lifecycle policy, …) and several unique ECS capabilities using either S3 or Swift (byte range, retentions, metadata search, …)
 - simplify the usage of several REST APIs (S3, Swift, Atmos, ECS)
 - provide a simple UI for the ECS metadata search features
 
@@ -80,7 +80,7 @@ You can then click on it to display the response.
 
 ### Appending data to an object
 
-This is an ECS extension. This feature isn't available in the standard S3 API.
+> This is an ECS extension. This feature isn't available in the standard S3 API.
 
 Appending data to an object can be very useful in many cases. For example, to append lines a log file.
 
@@ -88,7 +88,7 @@ On Amazon or other S3 compatible platforms, it would be necessary to send the fu
 
 ### Updating a byte range within an object
 
-This is an ECS extension. This feature isn't available in the standard S3 API.
+> This is an ECS extension. This feature isn't available in the standard S3 API.
 
 Updating partially an object can be very useful in many cases. For example, to modify a binary header stored at the beginning of a large file.
 
@@ -97,7 +97,7 @@ On Amazon or other S3 compatible platforms, it would be necessary to send the fu
 
 ### Reading multiple byte ranges within an object
 
-This is an ECS extension. This feature isn't available in the standard S3 API.
+> This is an ECS extension. This feature isn't available in the standard S3 API.
 
 Reading multiple parts of an object can be very useful in many cases. For example, to get several video parts.
 
@@ -105,7 +105,7 @@ On Amazon or other S3 compatible platforms, it would be necessary to send a diff
 
 ### Apply a retention to an object
 
-This is an ECS extension. This feature isn't available in the standard S3 API.
+> This is an ECS extension. This feature isn't available in the standard S3 API.
 
 Applying a retention to an object is the best way to protect data against accidental (or malicious) modifications and deletions. ECS provides compliance for both CAS and S3.
 
@@ -113,7 +113,7 @@ On Amazon or other S3 compatible platforms, there is no similar feature availabl
 
 ### Apply a retention to a bucket
 
-This is an ECS extension. This feature isn't available in the standard S3 API.
+> This is an ECS extension. This feature isn't available in the standard S3 API.
 
 Applying a retention to objects is the best way to protect data against accidental (or malicious) modifications and deletions. ECS provides compliance for both CAS and S3.
 
@@ -123,10 +123,10 @@ On Amazon or other S3 compatible platforms, there is no similar feature availabl
 
 ### Apply an expiration to a bucket
 
-This feature is available in the standard S3 API.
+> This feature is available in the standard S3 API.
 
 When using a standard File System, the application needs to manage the deletion of the old data.
-If the application wants to delete all the data after one year, a process must be ran every day and a logic must be implemented to decide what to do when a delete operation fails.
+If the application wants to delete all the data after one year, a process must be run every day and a logic must be implemented to decide what to do when a delete operation fails.
 
 Applying an expiration to a bucket is much simpler and reliable.
 
@@ -134,12 +134,9 @@ Some other S3 compatible platforms don’t support this feature.
 
 ### S3 versioning
 
-This feature is available in the standard S3 API.
+> This feature is available in the standard S3 API.
 
-Applying a retention to an object is the best way to protect data against accidental (or malicious) modifications and deletions.
-
-But if the application needs to modify objects, this is not a viable solution.
-In this case, using S3 versioning is recommended.
+Applying a retention to an object is the best way to protect data against accidental (or malicious) modifications and deletions. If the application needs to modify objects, this is not a viable solution. In this case, using S3 versioning is recommended.
 
 ECS supports S3 versioning for buckets created with FS access disabled.
 
@@ -148,7 +145,8 @@ Expiration can be configured at the bucket level to automatically delete old ver
 Some other S3 compatible platforms don’t support this feature.
 
 ### Metadata search
-This is an ECS extension. This feature isn't available in the standard S3 API.
+
+> This is an ECS extension. This feature isn't available in the standard S3 API.
 
 When an Amazon S3 bucket is created, a user can specify metadata (system and user) to be indexed by ECS. The metadata search feature includes the following capabilities:
 
@@ -163,7 +161,7 @@ Very few other S3 compatible platforms have a similar capability.
 
 ### S3 Copy
 
-This feature is available in the standard S3 API.
+> This feature is available in the standard S3 API.
 
 S3 Copy provides the ability to create a new object using the content of an existing one, but without copying the data.
 
@@ -191,7 +189,7 @@ Everything else is working the same way as described for the Amazon S3 API.
 
 ### Appending data to an object
 
-This is an ECS extension. This feature isn't available in the standard Swift API.
+> This is an ECS extension. This feature isn't available in the standard Swift API.
 
 Appending data to an object can be very useful in many cases. For example, to append lines a log file.
 
@@ -199,14 +197,15 @@ On Swift or other Swift compatible platforms, it would be necessary to send the 
 
 ### Updating a byte range within an object
 
-This is an ECS extension. This feature isn't available in the standard Swift API.
+> This is an ECS extension. This feature isn't available in the standard Swift API.
 
 Updating partially an object can be very useful in many cases. For example, to modify a binary header stored at the beginning of a large file.
 
 On Swift or other Swift compatible platforms, it would be necessary to send the full file again.
 
 ### Reading multiple byte ranges within an object
-This is an ECS extension. This feature isn't available in the standard Swift API.
+
+> This is an ECS extension. This feature isn't available in the standard Swift API.
 
 Reading multiple parts of an object can be very useful in many cases. For example, to get several video parts.
 
@@ -214,13 +213,13 @@ On Swift or other Swift compatible platforms, it would be necessary to send a di
 
 ### Apply a retention to an object
 
-This is an ECS extension. This feature isn't available in the standard Swift API.
+> This is an ECS extension. This feature isn't available in the standard Swift API.
 
 Applying a retention to an object is the best way to protect data against accidental (or malicious) modifications and deletions.
 
 ### Apply a retention to a container
 
-This is an ECS extension. This feature isn't available in the standard Swift API.
+> This is an ECS extension. This feature isn't available in the standard Swift API.
 
 Applying a retention to objects is the best way to protect data against accidental (or malicious) modifications and deletions.
 
@@ -244,7 +243,7 @@ Everything else is working the same way as described for the Amazon S3 API.
 
 ### Appending data to an object
 
-This is an ECS extension. This feature isn't available in the standard Atmos API.
+> This is an ECS extension. This feature isn't available in the standard Atmos API.
 
 Appending data to an object can be very useful in many cases. For example, to append lines a log file.
 
@@ -252,7 +251,7 @@ On Atmos, it would be necessary to send the full log file again.
 
 ### Updating a byte range within an object
 
-This is an ECS extension. This feature isn't available in the standard Atmos API.
+> This is an ECS extension. This feature isn't available in the standard Atmos API.
 
 Updating partially an object can be very useful in many cases. For example, to modify a binary header stored at the beginning of a large file.
 
@@ -260,7 +259,7 @@ On Atmos, it would be necessary to send the full file again.
 
 ### Apply a retention to an object
 
-This is an ECS extension. This feature isn't available in the standard Atmos API.
+> This is an ECS extension. This feature isn't available in the standard Atmos API.
 
 Applying a retention to an object is the best way to protect data against accidental (or malicious) modifications and deletions.
 
@@ -268,7 +267,7 @@ On Atmos, applying a retention to an object can only be done using metadata driv
 
 ###	Apply a retention to a bucket
 
-This is an ECS extension. This feature isn't available in the standard Atmos API.
+> This is an ECS extension. This feature isn't available in the standard Atmos API.
 
 Applying a retention to objects is the best way to protect data against accidental (or malicious) modifications and deletions.
 
@@ -283,4 +282,3 @@ The goal of this test is to show the compatibility of ECS with the Atmos objects
 ### Create an object with a specific object Id
 
 The goal of this test is to show the ability to migrate an object from Atmos to ECS with the Atmos objectspace API
-
