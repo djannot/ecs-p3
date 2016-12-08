@@ -2,7 +2,7 @@
 
 DellEMC Elastic Cloud Storage (ECS) is a software-defined, cloud-scale, object storage platform that combines the cost advantages of commodity infrastructure with comprehensive protocol support for unstructured (Object and File) workloads.
 
-ECS supports several Object Storage APIs (Amazon S3, Openstack Swift, Atmos, CAS), but the Amazon S3 is by the far the most popular.
+ECS supports several Object Storage APIs (Amazon S3, Openstack Swift, Atmos, CAS), but the Amazon S3 API is by the far the most popular.
 
 Data stored using the Amazon S3 API can also be accessed through NFS or HDFS, and vice versa.
 But a new Hadoop Compatible File System (HCFS), called *s3a*, has been introduced recently.
@@ -11,9 +11,7 @@ But a new Hadoop Compatible File System (HCFS), called *s3a*, has been introduce
 
 Apache Spark is a fast and general engine for large-scale data processing (by their own definition).
 
-We will use it to analyze tweets in JSON format.
-
-We will also leverage Apache Zeppeling, a web-based notebook that enables interactive data analytics. 
+We will use Spark to analyze tweets in JSON format and we will also leverage Apache Zeppelin, a web-based notebook that enables interactive data analytics. 
 
 ## Prerequisites
 
@@ -21,9 +19,7 @@ We will also leverage Apache Zeppeling, a web-based notebook that enables intera
 
 If you don't have access to an ECS system, you can create an account on [ECS Test Drive](http://portal.ecstestdrive.com).
 
-Then, you need create an Amazon S3 bucket called *spark1* using a tool like [S3 Browser](http://www.s3browser.com).
-
-Finally, you need to upload the file called `tweets.json` in the bucket. This file is available in the Github repo.
+Create an Amazon S3 bucket called *spark1* using a tool like [S3 Browser](http://www.s3browser.com). You need to upload the file called `tweets.json` in the bucket. This file is available in the Github repo.
 
 ### Apache Spark
 
@@ -45,13 +41,19 @@ docker run -it -p 8080:8080 djannot/docker-zeppelin bash
 
 You're now inside the Docker container.
 
+Install *vim* to be able to edit the configuration file later:
+```
+apt-get update
+apt-get install vim
+```
+
 Go to `/usr/hadoop-3.0.0-alpha1/lib` and run the command below to download the Amazon S3 SDK:
 
 ```
 wget http://central.maven.org/maven2/com/amazonaws/aws-java-sdk/1.7.4/aws-java-sdk-1.7.4.jar
 ```
 
-After that, go to `/usr/hadoop-3.0.0-alpha1/etc/hadoop` and edit the `core-site.xml` file as follow:
+After that, go to `/usr/hadoop-3.0.0-alpha1/etc/hadoop` and edit the `core-site.xml` file as follows:
 
 ```
 <configuration>
